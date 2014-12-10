@@ -1,26 +1,35 @@
+"use strict";
 Package.describe({
-    summary: "Login service for stripe accounts"
+  summary: "Login service for stripe accounts",
+  name: "dancaws:accounts-stripe",
+  version: "0.0.3"
 });
 
-Package.on_use(function(api) {
-    api.use('accounts-base', ['client', 'server']);
-    api.imply('accounts-base', ['client', 'server']);
-    api.use('accounts-oauth', ['client', 'server']);
+Npm.depends({
+  "stripe": "3.0.2"
+});
 
-		api.use('oauth', ['client', 'server']);
-    api.use('oauth2', ['client', 'server']);
-    api.use('http', ['server']);
-    api.use('underscore', 'server');
-    api.use('templating', 'client');
-    api.use('random', 'client');
-    api.use('service-configuration', ['client', 'server']);
-  	
-  	api.add_files(
-    ['lib/stripe_configure.html', 'lib/stripe_configure.js', 
-    'lib/stripe_login_button.css'],
+Package.onUse(function(api) {
+  api.use('accounts-base', ['client', 'server']);
+  api.imply('accounts-base', ['client', 'server']);
+  api.use('accounts-oauth', ['client', 'server']);
+
+  api.use('oauth', ['client', 'server']);
+  api.use('oauth2', ['client', 'server']);
+  api.use('http', ['server']);
+  api.use('underscore', 'server');
+  api.use('templating', 'client');
+  api.use('random', 'client');
+  api.use('url', 'client');
+  api.use('service-configuration', ['client', 'server']);
+
+  api.addFiles(['lib/stripe_configure.html',
+      'lib/stripe_configure.js',
+      'lib/stripe_login_button.css'
+    ],
     'client');
 
-    api.add_files("lib/accounts_stripe.js");
-    api.add_files('lib/stripe_client.js', 'client');
-    api.add_files('lib/stripe_server.js', 'server');
+  api.addFiles('lib/stripe_client.js', 'client');
+  api.addFiles('lib/stripe_server.js', 'server');
+  api.addFiles("lib/accounts_stripe.js");
 });
