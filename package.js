@@ -1,4 +1,5 @@
 Package.describe({
+ name: 'chroma:accounts-stripe'
     summary: "Login service for stripe accounts"
 });
 
@@ -14,9 +15,9 @@ Package.on_use(function(api) {
     api.use('templating', 'client');
     api.use('random', 'client');
     api.use('service-configuration', ['client', 'server']);
-  	
+
   	api.add_files(
-    ['lib/stripe_configure.html', 'lib/stripe_configure.js', 
+    ['lib/stripe_configure.html', 'lib/stripe_configure.js',
     'lib/stripe_login_button.css'],
     'client');
 
