@@ -2,7 +2,7 @@
 Package.describe({
   summary: "Login service for stripe accounts",
   name: "dancaws:accounts-stripe",
-  version: "0.0.3"
+  version: "0.0.4"
 });
 
 Npm.depends({
