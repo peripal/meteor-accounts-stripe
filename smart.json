@@ -1,8 +1,8 @@
 {
     "name": "accounts-stripe",
     "description": "Login service for stripe accounts",
-    "homepage": "https://github.com/khamoud/meteor-accounts-stripe",
-    "author": "Kris Hamoud (https://github.com/khamoud)",
-    "version": "0.0.2",
-    "git": "https://github.com/khamoud/meteor-accounts-stripe.git"
+    "homepage": "https://github.com/peripal/meteor-accounts-stripe",
+    "author": "Dan Caws (https://github.com/peripal)",
+    "version": "0.0.3",
+    "git": "https://github.com/peripal/meteor-accounts-stripe.git"
 }
